@@ -1,2 +1,12 @@
 *.exe
 coverage.out
+
+.env*
+*.env
+*.env.*
+.npmrc
+*.pem
+*.key
+.vercel
+.aws
+.ssh

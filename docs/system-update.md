@@ -97,7 +97,7 @@ Backend: `cmd/api/main.go`; `internal/server/server.go`, `admin.go`, `attendance
 
 Frontend: `App.tsx`; new `pages/Entry.tsx`, `pages/Management.tsx`, `lib/passkey.ts`, `lib/passkey.test.ts`; updated `pages/Admin.tsx`, `pages/Scan.tsx`, `pages/Records.tsx`, `components/ProfileControls.tsx`, CSS and Playwright attendance suite. The obsolete public-registration E2E fixtures were replaced by platform provisioning and actual virtual-authenticator WebAuthn ceremonies.
 
-Operations/docs: Docker Compose SMTP environment, `.env.example`, README, API schema generator/OpenAPI, system-update guide and revised security/deployment/limitations notes. Local private `.env` records the active test origin.
+Operations/docs: Docker Compose SMTP environment, local environment configuration, README, API schema generator/OpenAPI, system-update guide and revised security/deployment/limitations notes. Local private `.env` records the active test origin.
 
 ## Verification
 
