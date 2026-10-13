@@ -12,3 +12,5 @@ Devaraj Solutions offers deployment and initial configuration help. Request a qu
 You can request hosting and ongoing assistance instead of operating the application yourself. Availability, recurring fees, infrastructure costs, backup/retention arrangements, support scope and data-handling responsibilities are agreed before provisioning. There is no public instant signup or payment checkout.
 
 Start at https://devarajsolutions.site/products/devaraj-time. The company site explains the product and routes service inquiries; it does not share the attendance database or authentication.
+
+Service inquiries: email pavkhemerak.official@gmail.com, Telegram https://t.me/pavkhemerak, or phone +85514945699. Share your deployment scope and support requirements to request a quote. Avoid sending credentials or employee records in an initial inquiry.
