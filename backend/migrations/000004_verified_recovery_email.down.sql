@@ -1,0 +1,1 @@
+DROP INDEX verified_recovery_email_unique;

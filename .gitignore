@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.env
+*.exe
+/backend/api
+coverage.out
+*.tsbuildinfo
+playwright-report/
+test-results/
+storage/
+.local/
+
+# Local configuration and credentials must never be published.
+.env.*
+!.env.example
+*.pem
+*.key
