@@ -2,6 +2,8 @@
 
 **Smarter Attendance. Fairer Workplaces.**
 
+Open-source attendance and workforce management software, licensed under [MIT](LICENSE). [Get the source](https://github.com/khemerak/Devaraj-Time), self-host it, or request paid setup/hosting help from [Devaraj Solutions](https://devarajsolutions.site/products/devaraj-time). Software use does not require purchasing a service. Read [the hosting choices and service terms](docs/open-source-and-services.md).
+
 A working Go/PostgreSQL attendance application with a responsive React workspace. Employees record attendance through permanent printed QR points and fresh location evidence. Company administrators manage workplaces, employees and shifts. Employees can review original events and request corrections; authorized reviewers make traceable decisions.
 
 This release implements the core workflow and selected management modules. It is **not the entire master specification or a production certification**. Read [the exact limitations](docs/limitations.md) before adoption. Dashboard values come from PostgreSQL; only the explicit development seed creates fictional history.
