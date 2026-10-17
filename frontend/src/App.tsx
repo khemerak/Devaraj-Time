@@ -26,8 +26,6 @@ import {
   Bell,
   LogOut,
   Menu,
-  Sun,
-  Moon,
   ChevronDown,
   ArrowUpRight,
   Check,
@@ -42,6 +40,7 @@ const TrendChart = lazy(() => import('./components/TrendChart'));
 import { api, write, setCSRF, label, time, hours, APIError } from './lib/api';
 import { Button, Loading, ErrorMessage, Empty, Badge, Modal } from './components/ui';
 import ProfileControls from './components/ProfileControls';
+import { ThemeToggle } from './components/Theme';
 import { EmployeeEntry, Enrollment, Recovery } from './pages/Entry';
 const DevicePage = lazy(() =>
   import('./pages/Management').then((m) => ({ default: m.DevicePage }))
@@ -93,6 +92,16 @@ export function PageTitle({
   );
 }
 export default function App() {
+  return (
+    <>
+      <div className="standalone-theme">
+        <ThemeToggle />
+      </div>
+      <AppRoutes />
+    </>
+  );
+}
+function AppRoutes() {
   const path = location.pathname;
   if (path === '/enroll') return <Enrollment />;
   if (path === '/forgot-password') return <Recovery mode="request" />;
@@ -259,8 +268,7 @@ function Shell() {
   const team = user.role !== 'employee',
     configure = ['admin', 'owner'].includes(user.role);
   const [menu, setMenu] = useState(false),
-    [notifications, setNotifications] = useState(false),
-    [dark, setDark] = useState(localStorage.getItem('theme') === 'dark');
+    [notifications, setNotifications] = useState(false);
   const [mobile, setMobile] = useState(window.matchMedia('(max-width: 800px)').matches);
   useEffect(() => {
     const media = window.matchMedia('(max-width: 800px)');
@@ -292,10 +300,6 @@ function Shell() {
     refetchInterval: 30000,
   });
   const [error, setError] = useState<unknown>(null);
-  useEffect(() => {
-    document.documentElement.dataset.theme = dark ? 'dark' : 'light';
-    localStorage.setItem('theme', dark ? 'dark' : 'light');
-  }, [dark]);
   async function logout() {
     try {
       await write('/auth/logout', {});
@@ -397,9 +401,7 @@ function Shell() {
             {navigation.find((n) => n.path === location.pathname)?.label || 'Attendance'}
           </div>
           <div className="top-actions">
-            <Button variant="ghost" aria-label="Toggle color theme" onClick={() => setDark(!dark)}>
-              {dark ? <Sun size={19} /> : <Moon size={19} />}
-            </Button>
+            <ThemeToggle />
             <div className="notification-wrap">
               <Button
                 variant="ghost"
